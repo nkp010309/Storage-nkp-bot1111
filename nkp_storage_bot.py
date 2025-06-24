@@ -5,8 +5,10 @@ import hashlib
 import sqlite3
 
 # === Configuration ===
-TOKEN = '7514095629:AAHOcMtHvP1CKpsoYQDxo5qjeA430z-wyWs'
-ADMIN_ID = 6417186852
+import os
+
+TOKEN = os.environ.get("BOT_TOKEN")
+ADMIN_ID = int(os.environ.get("ADMIN_ID"))
 POWERED_BY = "Powered by @nkp10101"
 
 bot = telebot.TeleBot(TOKEN)
